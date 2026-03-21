@@ -28,6 +28,19 @@ https://github.com/lazytarget-homeassistant-addons/repository-beta
 
 ## Apps provided by this repository
 
+### &#10003; [Grocy][addon-grocy]
+
+![Latest Version][grocy-version-shield]
+![Supports armhf Architecture][grocy-armhf-shield]
+![Supports armv7 Architecture][grocy-armv7-shield]
+![Supports aarch64 Architecture][grocy-aarch64-shield]
+![Supports amd64 Architecture][grocy-amd64-shield]
+![Supports i386 Architecture][grocy-i386-shield]
+
+ERP beyond your fridge! A groceries & household management solution for your home
+
+[:books: Grocy app documentation][addon-doc-grocy]
+
 ## Releases
 
 Releases are based on [Semantic Versioning][semver], and use the format
