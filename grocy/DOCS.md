@@ -39,6 +39,7 @@ Example add-on configuration:
 culture: en
 currency: USD
 entry_page: stock
+grocycode_type: 2D
 features:
   batteries: true
   calendar: true
@@ -157,6 +158,17 @@ You can use the one of the following values:
 
 By default the homepage is set to the stock overview.
 
+### Option: `grocycode_type`
+
+Allows you to change the barcode type for GrocyCodes. Useful if your barcode scanner doesn't support the default.
+
+You can use the one of the following values:
+
+- `1D` (Code128)
+- `2D` (DataMatrix)
+
+Since v4.5.0 Grocy uses `2D` as the default.
+
 ### Option: `features`
 
 Is used for enable or disable features in Grocy. Disabled features
@@ -201,6 +213,29 @@ equal Sunday:
 Allows you to specify a default ingress user if desired (e.g. `admin`).
 
 If no ingress user is set, the default login authentication is used.
+
+### Option: `Label Printer`
+
+Allows posting to a webhook to print labels
+
+- `label_printer` Is used for enable or disable the feature in Grocy
+- `label_printer_webhook` The URI that Grocy will POST to when asked to print a label
+- `label_printer_run_server` Whether the webhook will be called server- or client-side
+- `label_printer_params` Additional parameters supplied to the webhook
+- `label_printer_hook_json` TRUE to use JSON or FALSE to use normal POST request variables
+
+### Option: `Thermal Printer`
+
+Thermal printers are receipt printers, not regular printers,
+the printer must support the ESC/POS protocol, see [ESC/POS protocol](https://github.com/mike42/escpos-php)
+
+**Note:** Only network printers are supported when running as a Home Assistant add-on. Direct USB/serial printer connections are not available in the containerized environment.
+
+- `thermal_printer` Is used for enable or disable the feature in Grocy
+- `tprinter_print_quantity_name` Set to false if you do not want to print the quantity names (related to the shopping list)
+- `tprinter_print_notes` Set to false if you do not want to print notes (related to the shopping list)
+- `tprinter_ip` IP of the network printer
+- `tprinter_port` Port of the network printer
 
 ## Known issues and limitations
 
