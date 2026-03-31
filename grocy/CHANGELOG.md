@@ -2,4 +2,4 @@
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Update grocy/grocy to v4.5.0 @lazytarget ([#6](https://github.com/lazytarget-homeassistant-apps/grocy/pull/6))
+- ⬆️ Update grocy/grocy to v4.6.0 @[renovate[bot]](https://github.com/apps/renovate) ([#11](https://github.com/lazytarget-homeassistant-apps/grocy/pull/11))
